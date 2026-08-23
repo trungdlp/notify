@@ -21,7 +21,7 @@
 
 ## About <a id="about"></a>
 
-Notify started as a solution to a personal problem: I needed a simple way to send notifications across different messaging platforms. What began as a tool for my own use has grown into a library designed for quick integration and ease of use, applicable to any notification scenario you might have.
+This repository is an actively maintained fork of [nikoksr/notify](https://github.com/nikoksr/notify). It preserves Notify's simple API for sending notifications across different messaging platforms while keeping dependencies current, replacing unmaintained client libraries, and maintaining service integrations.
 
 ## Disclaimer <a id="disclaimer"></a>
 
@@ -72,7 +72,7 @@ constructor functions to create a new local `Notify` instance and pass it down t
 
 ## Contributing <a id="contributing"></a>
 
-Yes, please! Contributions of all kinds are very welcome! Feel free to check our [open issues](https://github.com/trungdlp/notify/issues). Please also take a look at the [contribution guidelines](https://github.com/trungdlp/notify/blob/main/CONTRIBUTING.md).
+Contributions of all kinds are welcome. Check the [open issues](https://github.com/trungdlp/notify/issues), read the [contribution guidelines](https://github.com/trungdlp/notify/blob/main/CONTRIBUTING.md), or open a pull request to help keep the library and its service integrations up to date.
 
 > Psst, don't forget to check the list of [missing services](https://github.com/trungdlp/notify/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aaffects%2Fservices+label%3A%22help+wanted%22+no%3Aassignee) waiting to be added by you or create [a new issue](https://github.com/trungdlp/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) if you want a new service to be added.
 
@@ -117,6 +117,10 @@ Yes, please! Contributions of all kinds are very welcome! Feel free to check our
 
 ## Special Thanks <a id="special_thanks"></a>
 
+### Original project <a id="original-project"></a>
+
+Notify was originally created by [@nikoksr](https://github.com/nikoksr). This project is based on the original [nikoksr/notify](https://github.com/nikoksr/notify) repository and is grateful for the foundation built by its original author and contributors.
+
 ### Maintainers <a id="maintainers"></a>
 
 - [@svaloumas](https://github.com/svaloumas)
@@ -124,17 +128,3 @@ Yes, please! Contributions of all kinds are very welcome! Feel free to check our
 ### Logo <a id="logo"></a>
 
 The [logo](https://github.com/MariaLetta/free-gophers-pack) was made by the amazing [MariaLetta](https://github.com/MariaLetta).
-
-## More Projects
-
-If you find this library useful, you might also be interested in:
-
-- **[assert-go](https://github.com/nikoksr/assert-go)** - Tiny (~100 LoC) Go assertion library focused on crystal-clear failure messages
-- **[konfetty](https://github.com/nikoksr/konfetty)** - Zero-dependency, type-safe and powerful post-processing for your existing config solution in Go
-- **[typeid-zig](https://github.com/nikoksr/typeid-zig)** - Complete Zig implementation of the TypeID specification, recognized as an official community implementation
-
----
-
-<div align="center">
-<sub>Built with ❤️ by <a href="https://github.com/nikoksr">@nikoksr</a></sub>
-</div>
