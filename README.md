@@ -47,6 +47,9 @@ telegramService, _ := telegram.New("your_telegram_api_token")
 // Basically where should our message be sent?
 telegramService.AddReceivers(-1234567890)
 
+// Optional: send messages to a specific forum topic (message thread).
+telegramService.SetMessageThreadID(12345)
+
 // Tell our notifier to use the telegram service. You can repeat the above process
 // for as many services as you like and just tell the notifier to use them.
 // Inspired by http middlewares used in higher level libraries.
@@ -103,7 +106,7 @@ Yes, please! Contributions of all kinds are very welcome! Feel free to check our
 | [SendGrid](https://sendgrid.com)                                                  | [service/sendgrid](service/sendgrid)     | [sendgrid/sendgrid-go](https://github.com/sendgrid/sendgrid-go)                                 | :heavy_check_mark: |
 | [Slack](https://slack.com)                                                        | [service/slack](service/slack)           | [slack-go/slack](https://github.com/slack-go/slack)                                             | :heavy_check_mark: |
 | [Syslog](https://wikipedia.org/wiki/Syslog)                                       | [service/syslog](service/syslog)         | [log/syslog](https://pkg.go.dev/log/syslog)                                                     | :heavy_check_mark: |
-| [Telegram](https://telegram.org)                                                  | [service/telegram](service/telegram)     | [go-telegram-bot-api/telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) | :heavy_check_mark: |
+| [Telegram](https://telegram.org)                                                  | [service/telegram](service/telegram)     | [OvyFlash/telegram-bot-api](https://github.com/OvyFlash/telegram-bot-api)                       | :heavy_check_mark: |
 | [TextMagic](https://www.textmagic.com)                                            | [service/textmagic](service/textmagic)   | [textmagic/textmagic-rest-go-v2](https://github.com/textmagic/textmagic-rest-go-v2)             | :heavy_check_mark: |
 | [Twilio](https://www.twilio.com/)                                                 | [service/twilio](service/twilio)         | [kevinburke/twilio-go](https://github.com/kevinburke/twilio-go)                                 | :heavy_check_mark: |
 | [Twitter](https://twitter.com)                                                    | [service/twitter](service/twitter)       | [drswork/go-twitter](https://github.com/drswork/go-twitter)                                     | :heavy_check_mark: |

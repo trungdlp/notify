@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
+	tgbotapi "github.com/OvyFlash/telegram-bot-api"
 )
 
 const (
@@ -19,14 +19,15 @@ var parseMode = ModeHTML
 
 // Telegram struct holds necessary data to communicate with the Telegram API.
 type Telegram struct {
-	client  *tgbotapi.BotAPI
-	chatIDs []int64
+	client          *tgbotapi.BotAPI
+	chatIDs         []int64
+	messageThreadID int
 }
 
 // New returns a new instance of a Telegram notification service.
 // For more information about telegram api token:
 //
-//	-> https://pkg.go.dev/github.com/go-telegram-bot-api/telegram-bot-api#NewBotAPI
+//	-> https://pkg.go.dev/github.com/OvyFlash/telegram-bot-api#NewBotAPI
 func New(apiToken string) (*Telegram, error) {
 	client, err := tgbotapi.NewBotAPI(apiToken)
 	if err != nil {
@@ -41,10 +42,10 @@ func New(apiToken string) (*Telegram, error) {
 	return t, nil
 }
 
-// SetClient set a new custom BotAPI instance.
-// For example allowing you to use NewBotAPIWithClient:
+// SetClient sets a new custom BotAPI instance.
+// For example, this allows you to use NewBotAPIWithOptions:
 //
-//	-> https://pkg.go.dev/github.com/go-telegram-bot-api/telegram-bot-api#NewBotAPIWithClient
+//	-> https://pkg.go.dev/github.com/OvyFlash/telegram-bot-api#NewBotAPIWithOptions
 func (t *Telegram) SetClient(client *tgbotapi.BotAPI) {
 	t.client = client
 }
@@ -52,7 +53,7 @@ func (t *Telegram) SetClient(client *tgbotapi.BotAPI) {
 // SetParseMode sets the parse mode for the message body.
 // For more information about telegram constants:
 //
-//	-> https://pkg.go.dev/github.com/go-telegram-bot-api/telegram-bot-api#pkg-constants
+//	-> https://pkg.go.dev/github.com/OvyFlash/telegram-bot-api#pkg-constants
 func (t *Telegram) SetParseMode(mode string) {
 	parseMode = mode
 }
@@ -63,6 +64,12 @@ func (t *Telegram) AddReceivers(chatIDs ...int64) {
 	t.chatIDs = append(t.chatIDs, chatIDs...)
 }
 
+// SetMessageThreadID sets the unique identifier of the forum topic to which messages are sent.
+// Leave it at zero to send messages to the general chat.
+func (t *Telegram) SetMessageThreadID(messageThreadID int) {
+	t.messageThreadID = messageThreadID
+}
+
 // Send takes a message subject and a message body and sends them to all previously set chats. Message body supports
 // html as markup language.
 func (t Telegram) Send(ctx context.Context, subject, message string) error {
@@ -70,6 +77,7 @@ func (t Telegram) Send(ctx context.Context, subject, message string) error {
 
 	msg := tgbotapi.NewMessage(0, fullMessage)
 	msg.ParseMode = parseMode
+	msg.MessageThreadID = t.messageThreadID
 
 	for _, chatID := range t.chatIDs {
 		select {
