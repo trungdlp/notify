@@ -26,8 +26,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/nikoksr/notify"
-	"github.com/nikoksr/notify/service/lark"
+	"github.com/trungdlp/notify"
+	"github.com/trungdlp/notify/service/lark"
 )
 
 // Replace this with your own webhook URL.
@@ -63,8 +63,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/nikoksr/notify"
-	"github.com/nikoksr/notify/service/lark"
+	"github.com/trungdlp/notify"
+	"github.com/trungdlp/notify/service/lark"
 )
 
 // Replace these with the credentials from your custom app.
@@ -96,4 +96,3 @@ func main() {
 	log.Println("notification sent")
 }
 ```
-

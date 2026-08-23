@@ -11,9 +11,9 @@
 
 &nbsp;
 
-[![CI](https://github.com/nikoksr/notify/actions/workflows/ci.yml/badge.svg)](https://github.com/nikoksr/notify/actions/workflows/ci.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nikoksr/notify)](https://goreportcard.com/report/github.com/nikoksr/notify)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/notify)
+[![CI](https://github.com/trungdlp/notify/actions/workflows/ci.yml/badge.svg)](https://github.com/trungdlp/notify/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/trungdlp/notify)](https://goreportcard.com/report/github.com/trungdlp/notify)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/trungdlp/notify)
 
 </div>
 
@@ -34,7 +34,7 @@ Since Notify is highly dependent on the consistency of the supported external se
 ## Install <a id="install"></a>
 
 ```sh
-go get -u github.com/nikoksr/notify
+go get -u github.com/trungdlp/notify
 ```
 
 ## Example usage <a id="usage"></a>
@@ -69,13 +69,13 @@ constructor functions to create a new local `Notify` instance and pass it down t
 
 ## Contributing <a id="contributing"></a>
 
-Yes, please! Contributions of all kinds are very welcome! Feel free to check our [open issues](https://github.com/nikoksr/notify/issues). Please also take a look at the [contribution guidelines](https://github.com/nikoksr/notify/blob/main/CONTRIBUTING.md).
+Yes, please! Contributions of all kinds are very welcome! Feel free to check our [open issues](https://github.com/trungdlp/notify/issues). Please also take a look at the [contribution guidelines](https://github.com/trungdlp/notify/blob/main/CONTRIBUTING.md).
 
-> Psst, don't forget to check the list of [missing services](https://github.com/nikoksr/notify/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aaffects%2Fservices+label%3A%22help+wanted%22+no%3Aassignee) waiting to be added by you or create [a new issue](https://github.com/nikoksr/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) if you want a new service to be added.
+> Psst, don't forget to check the list of [missing services](https://github.com/trungdlp/notify/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aaffects%2Fservices+label%3A%22help+wanted%22+no%3Aassignee) waiting to be added by you or create [a new issue](https://github.com/trungdlp/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) if you want a new service to be added.
 
 ## Supported services <a id="supported_services"></a>
 
-> Click [here](https://github.com/nikoksr/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) to request a missing service.
+> Click [here](https://github.com/trungdlp/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) to request a missing service.
 
 | Service                                                                           | Path                                     | Credits                                                                                         |       Status       |
 |-----------------------------------------------------------------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------|:------------------:|

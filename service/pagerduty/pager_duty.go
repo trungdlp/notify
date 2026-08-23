@@ -7,7 +7,7 @@ import (
 
 	"github.com/PagerDuty/go-pagerduty"
 
-	"github.com/nikoksr/notify"
+	"github.com/trungdlp/notify"
 )
 
 type Client interface {

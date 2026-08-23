@@ -1,6 +1,6 @@
 # Generic HTTP service
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/notify/service/http)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/trungdlp/notify/service/http)
 
 ## Prerequisites
 
@@ -18,8 +18,8 @@ import (
 	"log"
 	stdhttp "net/http"
 
-	"github.com/nikoksr/notify"
-	"github.com/nikoksr/notify/service/http"
+	"github.com/trungdlp/notify"
+	"github.com/trungdlp/notify/service/http"
 )
 
 func main() {

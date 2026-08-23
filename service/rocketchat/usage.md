@@ -2,7 +2,7 @@
 
 Install notifier using:
 
-* `go get -u github.com/nikoksr/notify`
+* `go get -u github.com/trungdlp/notify`
 
 
 ## Steps to follow
@@ -25,8 +25,8 @@ These are general and very high level instructions
 package main
 
 import (
-  "github.com/nikoksr/notify"
-  "github.com/nikoksr/notify/service/rocketchat"
+  "github.com/trungdlp/notify"
+  "github.com/trungdlp/notify/service/rocketchat"
   "golang.org/x/net/context"
 )
 

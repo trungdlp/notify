@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/nikoksr/notify/service/pagerduty"
+	"github.com/trungdlp/notify/service/pagerduty"
 )
 
 type mockClient struct {

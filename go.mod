@@ -1,4 +1,4 @@
-module github.com/nikoksr/notify
+module github.com/trungdlp/notify
 
 go 1.25.10
 

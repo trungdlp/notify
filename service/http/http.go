@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/nikoksr/notify"
+	"github.com/trungdlp/notify"
 )
 
 type (

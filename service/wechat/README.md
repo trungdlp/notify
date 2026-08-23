@@ -42,8 +42,8 @@ import (
   "context"
   "fmt"
   "net/http"
-  "github.com/nikoksr/notify"
-  "github.com/nikoksr/notify/service/wechat"
+  "github.com/trungdlp/notify"
+  "github.com/trungdlp/notify/service/wechat"
 )
 
 func main() {
@@ -81,4 +81,3 @@ func main() {
 ```
 
 ![wechat_usage.png](img/wechat_usage.png)
-
