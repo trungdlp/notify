@@ -21,7 +21,9 @@
 
 ## About <a id="about"></a>
 
-This repository is an actively maintained fork of [nikoksr/notify](https://github.com/nikoksr/notify). It preserves Notify's simple API for sending notifications across different messaging platforms while keeping dependencies current, replacing unmaintained client libraries, and maintaining service integrations.
+Notify started as a solution to a personal problem: its original creator needed a simple way to send notifications across different messaging platforms. What began as a tool for personal use has grown into a library designed for quick integration and ease of use, applicable to any notification scenario.
+
+This repository is an actively maintained fork of [nikoksr/notify](https://github.com/nikoksr/notify). It preserves Notify's simple API while keeping dependencies current, replacing unmaintained client libraries, and maintaining service integrations.
 
 ## Disclaimer <a id="disclaimer"></a>
 
