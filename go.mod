@@ -1,6 +1,6 @@
 module github.com/trungdlp/notify
 
-go 1.27.0
+go 1.26.7
 
 require (
 	firebase.google.com/go/v4 v4.21.0
