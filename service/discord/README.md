@@ -1,6 +1,6 @@
 # Discord
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/notify/service/discord)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/trungdlp/notify/service/discord)
 
 ## Prerequisites
 
@@ -22,8 +22,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/nikoksr/notify"
-	"github.com/nikoksr/notify/service/discord"
+	"github.com/trungdlp/notify"
+	"github.com/trungdlp/notify/service/discord"
 )
 
 func main() {
@@ -73,8 +73,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/nikoksr/notify"
-	"github.com/nikoksr/notify/service/discord"
+	"github.com/trungdlp/notify"
+	"github.com/trungdlp/notify/service/discord"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/nikoksr/notify/service/pagerduty"
+	"github.com/trungdlp/notify/service/pagerduty"
 )
 
 func TestConfig_NewConfig(t *testing.T) {

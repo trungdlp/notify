@@ -8,8 +8,8 @@ Usage:
 	import (
 		"context"
 
-		"github.com/nikoksr/notify"
-		"github.com/nikoksr/notify/service/reddit"
+		"github.com/trungdlp/notify"
+		"github.com/trungdlp/notify/service/reddit"
 	)
 
 	func main() {

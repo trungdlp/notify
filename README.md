@@ -11,9 +11,9 @@
 
 &nbsp;
 
-[![CI](https://github.com/nikoksr/notify/actions/workflows/ci.yml/badge.svg)](https://github.com/nikoksr/notify/actions/workflows/ci.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nikoksr/notify)](https://goreportcard.com/report/github.com/nikoksr/notify)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/notify)
+[![CI](https://github.com/trungdlp/notify/actions/workflows/ci.yml/badge.svg)](https://github.com/trungdlp/notify/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/trungdlp/notify)](https://goreportcard.com/report/github.com/trungdlp/notify)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/trungdlp/notify)
 
 </div>
 
@@ -21,7 +21,9 @@
 
 ## About <a id="about"></a>
 
-Notify started as a solution to a personal problem: I needed a simple way to send notifications across different messaging platforms. What began as a tool for my own use has grown into a library designed for quick integration and ease of use, applicable to any notification scenario you might have.
+Notify started as a solution to a personal problem: its original creator needed a simple way to send notifications across different messaging platforms. What began as a tool for personal use has grown into a library designed for quick integration and ease of use, applicable to any notification scenario.
+
+This repository is an actively maintained fork of [nikoksr/notify](https://github.com/nikoksr/notify). It preserves Notify's simple API while keeping dependencies current, replacing unmaintained client libraries, and maintaining service integrations.
 
 ## Disclaimer <a id="disclaimer"></a>
 
@@ -34,7 +36,7 @@ Since Notify is highly dependent on the consistency of the supported external se
 ## Install <a id="install"></a>
 
 ```sh
-go get -u github.com/nikoksr/notify
+go get -u github.com/trungdlp/notify
 ```
 
 ## Example usage <a id="usage"></a>
@@ -46,6 +48,9 @@ telegramService, _ := telegram.New("your_telegram_api_token")
 // Passing a telegram chat id as receiver for our messages.
 // Basically where should our message be sent?
 telegramService.AddReceivers(-1234567890)
+
+// Optional: send messages to a specific forum topic (message thread).
+telegramService.SetMessageThreadID(12345)
 
 // Tell our notifier to use the telegram service. You can repeat the above process
 // for as many services as you like and just tell the notifier to use them.
@@ -69,13 +74,13 @@ constructor functions to create a new local `Notify` instance and pass it down t
 
 ## Contributing <a id="contributing"></a>
 
-Yes, please! Contributions of all kinds are very welcome! Feel free to check our [open issues](https://github.com/nikoksr/notify/issues). Please also take a look at the [contribution guidelines](https://github.com/nikoksr/notify/blob/main/CONTRIBUTING.md).
+Contributions of all kinds are welcome. Check the [open issues](https://github.com/trungdlp/notify/issues), read the [contribution guidelines](https://github.com/trungdlp/notify/blob/main/CONTRIBUTING.md), or open a pull request to help keep the library and its service integrations up to date.
 
-> Psst, don't forget to check the list of [missing services](https://github.com/nikoksr/notify/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aaffects%2Fservices+label%3A%22help+wanted%22+no%3Aassignee) waiting to be added by you or create [a new issue](https://github.com/nikoksr/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) if you want a new service to be added.
+> Psst, don't forget to check the list of [missing services](https://github.com/trungdlp/notify/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aaffects%2Fservices+label%3A%22help+wanted%22+no%3Aassignee) waiting to be added by you or create [a new issue](https://github.com/trungdlp/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) if you want a new service to be added.
 
 ## Supported services <a id="supported_services"></a>
 
-> Click [here](https://github.com/nikoksr/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) to request a missing service.
+> Click [here](https://github.com/trungdlp/notify/issues/new?assignees=&labels=affects%2Fservices%2C+good+first+issue%2C+hacktoberfest%2C+help+wanted%2C+type%2Fenhancement%2C+up+for+grabs&template=service-request.md&title=feat%28service%29%3A+Add+%5BSERVICE+NAME%5D+service) to request a missing service.
 
 | Service                                                                           | Path                                     | Credits                                                                                         |       Status       |
 |-----------------------------------------------------------------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------|:------------------:|
@@ -103,7 +108,7 @@ Yes, please! Contributions of all kinds are very welcome! Feel free to check our
 | [SendGrid](https://sendgrid.com)                                                  | [service/sendgrid](service/sendgrid)     | [sendgrid/sendgrid-go](https://github.com/sendgrid/sendgrid-go)                                 | :heavy_check_mark: |
 | [Slack](https://slack.com)                                                        | [service/slack](service/slack)           | [slack-go/slack](https://github.com/slack-go/slack)                                             | :heavy_check_mark: |
 | [Syslog](https://wikipedia.org/wiki/Syslog)                                       | [service/syslog](service/syslog)         | [log/syslog](https://pkg.go.dev/log/syslog)                                                     | :heavy_check_mark: |
-| [Telegram](https://telegram.org)                                                  | [service/telegram](service/telegram)     | [go-telegram-bot-api/telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) | :heavy_check_mark: |
+| [Telegram](https://telegram.org)                                                  | [service/telegram](service/telegram)     | [OvyFlash/telegram-bot-api](https://github.com/OvyFlash/telegram-bot-api)                       | :heavy_check_mark: |
 | [TextMagic](https://www.textmagic.com)                                            | [service/textmagic](service/textmagic)   | [textmagic/textmagic-rest-go-v2](https://github.com/textmagic/textmagic-rest-go-v2)             | :heavy_check_mark: |
 | [Twilio](https://www.twilio.com/)                                                 | [service/twilio](service/twilio)         | [kevinburke/twilio-go](https://github.com/kevinburke/twilio-go)                                 | :heavy_check_mark: |
 | [Twitter](https://twitter.com)                                                    | [service/twitter](service/twitter)       | [drswork/go-twitter](https://github.com/drswork/go-twitter)                                     | :heavy_check_mark: |
@@ -114,6 +119,10 @@ Yes, please! Contributions of all kinds are very welcome! Feel free to check our
 
 ## Special Thanks <a id="special_thanks"></a>
 
+### Original project <a id="original-project"></a>
+
+Notify was originally created by [@nikoksr](https://github.com/nikoksr). This project is based on the original [nikoksr/notify](https://github.com/nikoksr/notify) repository and is grateful for the foundation built by its original author and contributors.
+
 ### Maintainers <a id="maintainers"></a>
 
 - [@svaloumas](https://github.com/svaloumas)
@@ -121,17 +130,3 @@ Yes, please! Contributions of all kinds are very welcome! Feel free to check our
 ### Logo <a id="logo"></a>
 
 The [logo](https://github.com/MariaLetta/free-gophers-pack) was made by the amazing [MariaLetta](https://github.com/MariaLetta).
-
-## More Projects
-
-If you find this library useful, you might also be interested in:
-
-- **[assert-go](https://github.com/nikoksr/assert-go)** - Tiny (~100 LoC) Go assertion library focused on crystal-clear failure messages
-- **[konfetty](https://github.com/nikoksr/konfetty)** - Zero-dependency, type-safe and powerful post-processing for your existing config solution in Go
-- **[typeid-zig](https://github.com/nikoksr/typeid-zig)** - Complete Zig implementation of the TypeID specification, recognized as an official community implementation
-
----
-
-<div align="center">
-<sub>Built with ❤️ by <a href="https://github.com/nikoksr">@nikoksr</a></sub>
-</div>

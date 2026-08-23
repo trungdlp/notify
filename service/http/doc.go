@@ -16,8 +16,8 @@ Usage:
 		    "log"
 		    stdhttp "net/http"
 
-		    "github.com/nikoksr/notify"
-		    "github.com/nikoksr/notify/service/http"
+		    "github.com/trungdlp/notify"
+		    "github.com/trungdlp/notify/service/http"
 	    )
 
 	    func main() {

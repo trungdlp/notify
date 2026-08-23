@@ -4,7 +4,7 @@ template: testify
 template-data:
   unroll-variadic: true
 packages:
-  github.com/nikoksr/notify:
+  github.com/trungdlp/notify:
     config:
       dir: "{{.InterfaceDir}}"
       include-auto-generated: false
